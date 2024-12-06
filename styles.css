@@ -1,0 +1,98 @@
+/* RESET CSS */
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* VARIABLES */
+:root {
+    --border-color: rgb(60, 70, 75);
+    --border-radius: 1.5rem;
+    --background-color: rgb(20, 30, 35, 0.5);
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+    width: 0;
+}
+
+/* GLOBAL */
+body {
+    width: 100%;
+    height: 100svh;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 5, 10);
+    z-index: -1;
+}
+
+input[type="text"] {
+    position: absolute;
+    width: calc(100% - 3rem);
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    outline: none;
+    background-color: var(--background-color);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+/* SETTINGS MENU */
+#settings-menu {
+    position: absolute;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    width: 15rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background-color: var(--background-color);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+#settings-menu h2 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#settings-menu label {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* GITHUB LINK */
+#github-link {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+#github-link:hover {
+    transform: scale(1.2);
+}
+
+#github-icon {
+    height: 1.5rem;
+    display: block;
+}
